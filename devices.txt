@@ -1,0 +1,2 @@
+01:Entrada:192.168.1.50
+Camara Salida:Salida:192.168.1.51

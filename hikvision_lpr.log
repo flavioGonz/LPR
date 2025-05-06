@@ -1,0 +1,2487 @@
+[2025-05-06 18:56:41] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 18:56:41] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 18:56:41] Método HTTP: POST
+[2025-05-06 18:56:41] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 18:56:41] Query String: 
+[2025-05-06 18:56:41] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1036520
+)
+
+[2025-05-06 18:56:41] Detectado Content-Type multipart/form-data.
+[2025-05-06 18:56:41] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 18:56:41] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php512C.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050613564172500ky5URX9OkwZhy.jpg
+            [full_path] => 2025050613564172500ky5URX9OkwZhy.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php512D.tmp
+            [error] => 0
+            [size] => 3412
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050613564172500d8wtMmTvXnsx5.jpg
+            [full_path] => 2025050613564172500d8wtMmTvXnsx5.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php512E.tmp
+            [error] => 0
+            [size] => 1030315
+        )
+
+)
+
+[2025-05-06 18:56:41] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 18:56:41] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3412 bytes.
+[2025-05-06 18:56:41] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 18:56:41] Datos de Alarma extraídos del XML.
+[2025-05-06 18:56:41] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T13:56:40+08:00, Evento=ANPR, Placa=B143865, Imagen Recibida=Sí (3412 bytes)
+[2025-05-06 18:56:41] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/B143865_1_20250506185641_c8da82.jpg
+[2025-05-06 18:56:41] Procesando evento LPR (ANPR) para la placa: B143865
+[2025-05-06 18:56:41] Evento LPR (B143865 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 18:56:41] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 18:56:41] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 18:56:52] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 18:56:52] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 18:56:52] Método HTTP: POST
+[2025-05-06 18:56:52] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 18:56:52] Query String: 
+[2025-05-06 18:56:52] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1027290
+)
+
+[2025-05-06 18:56:52] Detectado Content-Type multipart/form-data.
+[2025-05-06 18:56:52] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 18:56:52] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php7C27.tmp
+            [error] => 0
+            [size] => 2294
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 20250506135652661009mykXdoSbUg36.jpg
+            [full_path] => 20250506135652661009mykXdoSbUg36.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php7C28.tmp
+            [error] => 0
+            [size] => 4205
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050613565266100Eb0GEQcHD0iEX.jpg
+            [full_path] => 2025050613565266100Eb0GEQcHD0iEX.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php7C29.tmp
+            [error] => 0
+            [size] => 1020291
+        )
+
+)
+
+[2025-05-06 18:56:52] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2294
+[2025-05-06 18:56:52] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4205 bytes.
+[2025-05-06 18:56:52] Parseando XML Data String (longitud: 2294): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 18:56:52] Datos de Alarma extraídos del XML.
+[2025-05-06 18:56:52] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T13:56:51+08:00, Evento=ANPR, Placa=B401473, Imagen Recibida=Sí (4205 bytes)
+[2025-05-06 18:56:52] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/B401473_1_20250506185652_89938b.jpg
+[2025-05-06 18:56:52] Procesando evento LPR (ANPR) para la placa: B401473
+[2025-05-06 18:56:52] Evento LPR (B401473 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 18:56:52] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 18:56:52] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 18:59:13] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 18:59:13] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 18:59:13] Método HTTP: POST
+[2025-05-06 18:59:13] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 18:59:13] Query String: 
+[2025-05-06 18:59:13] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1617282
+)
+
+[2025-05-06 18:59:13] Detectado Content-Type multipart/form-data.
+[2025-05-06 18:59:13] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 18:59:13] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpA2C3.tmp
+            [error] => 0
+            [size] => 2622
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 202505061359127860060EgoiNuDIYbg.jpg
+            [full_path] => 202505061359127860060EgoiNuDIYbg.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA2C4.tmp
+            [error] => 0
+            [size] => 6766
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 2025050613591278600Ol9Cq05ULtsAQ.jpg
+            [full_path] => 2025050613591278600Ol9Cq05ULtsAQ.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA2C5.tmp
+            [error] => 0
+            [size] => 182781
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050613591278600VlpGhVrdQVVfR.jpg
+            [full_path] => 2025050613591278600VlpGhVrdQVVfR.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA2F5.tmp
+            [error] => 0
+            [size] => 1424439
+        )
+
+)
+
+[2025-05-06 18:59:13] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2622
+[2025-05-06 18:59:13] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 6766 bytes.
+[2025-05-06 18:59:13] Parseando XML Data String (longitud: 2622): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 18:59:13] Datos de Alarma extraídos del XML.
+[2025-05-06 18:59:13] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T13:59:11-03:00, Evento=ANPR, Placa=BED5336, Imagen Recibida=Sí (6766 bytes)
+[2025-05-06 18:59:13] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BED5336_1_20250506185913_b9a973.jpg
+[2025-05-06 18:59:13] Procesando evento LPR (ANPR) para la placa: BED5336
+[2025-05-06 18:59:13] Evento LPR (BED5336 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 18:59:13] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 18:59:13] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:00:01] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:00:01] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:00:01] Método HTTP: POST
+[2025-05-06 19:00:01] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:00:01] Query String: 
+[2025-05-06 19:00:01] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 989927
+)
+
+[2025-05-06 19:00:01] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:00:01] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:00:01] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php5C34.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614000086700AZDondBETmT0A.jpg
+            [full_path] => 2025050614000086700AZDondBETmT0A.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5C35.tmp
+            [error] => 0
+            [size] => 4032
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614000086700DqySMYUukkmdG.jpg
+            [full_path] => 2025050614000086700DqySMYUukkmdG.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5C36.tmp
+            [error] => 0
+            [size] => 983103
+        )
+
+)
+
+[2025-05-06 19:00:01] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:00:01] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4032 bytes.
+[2025-05-06 19:00:01] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:00:01] Datos de Alarma extraídos del XML.
+[2025-05-06 19:00:01] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T13:59:59+08:00, Evento=ANPR, Placa=BFA1427, Imagen Recibida=Sí (4032 bytes)
+[2025-05-06 19:00:01] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BFA1427_1_20250506190001_f9ed14.jpg
+[2025-05-06 19:00:01] Procesando evento LPR (ANPR) para la placa: BFA1427
+[2025-05-06 19:00:01] Evento LPR (BFA1427 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:00:01] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:00:01] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:05:44] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:05:44] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:05:44] Método HTTP: POST
+[2025-05-06 19:05:44] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:05:44] Query String: 
+[2025-05-06 19:05:44] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 836149
+)
+
+[2025-05-06 19:05:44] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:05:44] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:05:44] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php9A12.tmp
+            [error] => 0
+            [size] => 2292
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614054418200bWxnvI13AHnpG.jpg
+            [full_path] => 2025050614054418200bWxnvI13AHnpG.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9A13.tmp
+            [error] => 0
+            [size] => 7067
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614054418200TM4QOnXcG1LWd.jpg
+            [full_path] => 2025050614054418200TM4QOnXcG1LWd.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9A14.tmp
+            [error] => 0
+            [size] => 826291
+        )
+
+)
+
+[2025-05-06 19:05:44] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2292
+[2025-05-06 19:05:44] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 7067 bytes.
+[2025-05-06 19:05:44] Parseando XML Data String (longitud: 2292): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:05:44] Datos de Alarma extraídos del XML.
+[2025-05-06 19:05:44] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:05:43+08:00, Evento=ANPR, Placa=BTP1012, Imagen Recibida=Sí (7067 bytes)
+[2025-05-06 19:05:44] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BTP1012_1_20250506190544_e92f8f.jpg
+[2025-05-06 19:05:44] Procesando evento LPR (ANPR) para la placa: BTP1012
+[2025-05-06 19:05:44] Evento LPR (BTP1012 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:05:44] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:05:44] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:06:13] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:06:13] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:06:13] Método HTTP: POST
+[2025-05-06 19:06:13] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:06:13] Query String: 
+[2025-05-06 19:06:13] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1009603
+)
+
+[2025-05-06 19:06:13] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:06:13] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:06:13] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpB00.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614061394900QnvI4twPM050l.jpg
+            [full_path] => 2025050614061394900QnvI4twPM050l.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpB10.tmp
+            [error] => 0
+            [size] => 3447
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614061395000Ivlh4ceSrlNF5.jpg
+            [full_path] => 2025050614061395000Ivlh4ceSrlNF5.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpB11.tmp
+            [error] => 0
+            [size] => 1003363
+        )
+
+)
+
+[2025-05-06 19:06:13] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:06:13] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3447 bytes.
+[2025-05-06 19:06:13] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:06:13] Datos de Alarma extraídos del XML.
+[2025-05-06 19:06:13] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:06:12+08:00, Evento=ANPR, Placa=BCA1627, Imagen Recibida=Sí (3447 bytes)
+[2025-05-06 19:06:13] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BCA1627_1_20250506190613_28226f.jpg
+[2025-05-06 19:06:13] Procesando evento LPR (ANPR) para la placa: BCA1627
+[2025-05-06 19:06:13] Evento LPR (BCA1627 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:06:13] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:06:13] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:06:14] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:06:14] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:06:14] Método HTTP: POST
+[2025-05-06 19:06:14] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:06:14] Query String: 
+[2025-05-06 19:06:14] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1221226
+)
+
+[2025-05-06 19:06:14] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:06:14] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:06:14] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpF39.tmp
+            [error] => 0
+            [size] => 2262
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 2025050614061332400UxYGY7cgcMbha.jpg
+            [full_path] => 2025050614061332400UxYGY7cgcMbha.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpF3A.tmp
+            [error] => 0
+            [size] => 200471
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614061332400F8g4FfRaQZMEc.jpg
+            [full_path] => 2025050614061332400F8g4FfRaQZMEc.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpF89.tmp
+            [error] => 0
+            [size] => 1017996
+        )
+
+)
+
+[2025-05-06 19:06:14] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2262
+[2025-05-06 19:06:14] No se encontró 'licensePlatePicture_jpg' en $_FILES o hubo un error de subida (Código: N/A).
+[2025-05-06 19:06:14] Parseando XML Data String (longitud: 2262): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:06:14] Datos de Alarma extraídos del XML.
+[2025-05-06 19:06:14] FINAL (multipart): No se encontró/leyó la imagen 'licensePlatePicture_jpg' desde $_FILES.
+[2025-05-06 19:06:14] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:06:12-03:00, Evento=ANPR, Placa=unknown, Imagen Recibida=No
+[2025-05-06 19:06:14] Advertencia: No hay datos de imagen binarios para guardar, pero hay placa y evento.
+[2025-05-06 19:06:14] Procesando evento LPR (ANPR) para la placa: unknown
+[2025-05-06 19:06:14] Evento LPR (unknown desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:06:14] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:06:14] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:06:58] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:06:58] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:06:58] Método HTTP: POST
+[2025-05-06 19:06:58] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:06:58] Query String: 
+[2025-05-06 19:06:58] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 939967
+)
+
+[2025-05-06 19:06:58] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:06:58] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:06:58] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpBAED.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614065810600WHSkzdBswqShL.jpg
+            [full_path] => 2025050614065810600WHSkzdBswqShL.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBAEE.tmp
+            [error] => 0
+            [size] => 5280
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614065810600k7W1IsFTppFM0.jpg
+            [full_path] => 2025050614065810600k7W1IsFTppFM0.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBAFE.tmp
+            [error] => 0
+            [size] => 931895
+        )
+
+)
+
+[2025-05-06 19:06:58] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:06:58] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 5280 bytes.
+[2025-05-06 19:06:58] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:06:58] Datos de Alarma extraídos del XML.
+[2025-05-06 19:06:58] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:06:57+08:00, Evento=ANPR, Placa=MAB1903, Imagen Recibida=Sí (5280 bytes)
+[2025-05-06 19:06:58] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/MAB1903_1_20250506190658_f15de9.jpg
+[2025-05-06 19:06:58] Procesando evento LPR (ANPR) para la placa: MAB1903
+[2025-05-06 19:06:58] Evento LPR (MAB1903 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:06:58] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:06:58] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:07:15] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:07:15] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:07:15] Método HTTP: POST
+[2025-05-06 19:07:15] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:07:15] Query String: 
+[2025-05-06 19:07:15] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 998947
+)
+
+[2025-05-06 19:07:15] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:07:15] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:07:15] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpFE13.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614071531900KuC5WIkm7MFEO.jpg
+            [full_path] => 2025050614071531900KuC5WIkm7MFEO.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpFE14.tmp
+            [error] => 0
+            [size] => 4020
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614071531900myrhbKCmogGBc.jpg
+            [full_path] => 2025050614071531900myrhbKCmogGBc.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpFE25.tmp
+            [error] => 0
+            [size] => 992135
+        )
+
+)
+
+[2025-05-06 19:07:15] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:07:15] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4020 bytes.
+[2025-05-06 19:07:15] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:07:15] Datos de Alarma extraídos del XML.
+[2025-05-06 19:07:15] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:07:14+08:00, Evento=ANPR, Placa=BEB0715, Imagen Recibida=Sí (4020 bytes)
+[2025-05-06 19:07:15] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEB0715_1_20250506190715_4b5e3e.jpg
+[2025-05-06 19:07:15] Procesando evento LPR (ANPR) para la placa: BEB0715
+[2025-05-06 19:07:15] Evento LPR (BEB0715 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:07:15] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:07:15] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:07:43] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:07:43] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:07:43] Método HTTP: POST
+[2025-05-06 19:07:43] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:07:43] Query String: 
+[2025-05-06 19:07:43] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1014710
+)
+
+[2025-05-06 19:07:43] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:07:44] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:07:44] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php6BD4.tmp
+            [error] => 0
+            [size] => 2294
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614074340200K1hFT2A2mlPyQ.jpg
+            [full_path] => 2025050614074340200K1hFT2A2mlPyQ.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php6BD5.tmp
+            [error] => 0
+            [size] => 3705
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614074340200KLzz6oTKFIiCI.jpg
+            [full_path] => 2025050614074340200KLzz6oTKFIiCI.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php6BD6.tmp
+            [error] => 0
+            [size] => 1008211
+        )
+
+)
+
+[2025-05-06 19:07:44] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2294
+[2025-05-06 19:07:44] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3705 bytes.
+[2025-05-06 19:07:44] Parseando XML Data String (longitud: 2294): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:07:44] Datos de Alarma extraídos del XML.
+[2025-05-06 19:07:44] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:07:42+08:00, Evento=ANPR, Placa=BAA5402, Imagen Recibida=Sí (3705 bytes)
+[2025-05-06 19:07:44] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BAA5402_1_20250506190744_83c83b.jpg
+[2025-05-06 19:07:44] Procesando evento LPR (ANPR) para la placa: BAA5402
+[2025-05-06 19:07:44] Evento LPR (BAA5402 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:07:44] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:07:44] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:08:36] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:08:36] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:08:36] Método HTTP: POST
+[2025-05-06 19:08:36] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:08:36] Query String: 
+[2025-05-06 19:08:36] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1010982
+)
+
+[2025-05-06 19:08:36] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:08:36] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:08:36] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php3745.tmp
+            [error] => 0
+            [size] => 2292
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614083550100ZlBGLg6yZDV5g.jpg
+            [full_path] => 2025050614083550100ZlBGLg6yZDV5g.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php3746.tmp
+            [error] => 0
+            [size] => 3523
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 20250506140835502007zOXeFYedGBO0.jpg
+            [full_path] => 20250506140835502007zOXeFYedGBO0.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php3757.tmp
+            [error] => 0
+            [size] => 1004667
+        )
+
+)
+
+[2025-05-06 19:08:36] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2292
+[2025-05-06 19:08:36] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3523 bytes.
+[2025-05-06 19:08:36] Parseando XML Data String (longitud: 2292): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:08:36] Datos de Alarma extraídos del XML.
+[2025-05-06 19:08:36] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:08:34+08:00, Evento=ANPR, Placa=BEC0875, Imagen Recibida=Sí (3523 bytes)
+[2025-05-06 19:08:36] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEC0875_1_20250506190836_194368.jpg
+[2025-05-06 19:08:36] Procesando evento LPR (ANPR) para la placa: BEC0875
+[2025-05-06 19:08:36] Evento LPR (BEC0875 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:08:36] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:08:36] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:12:07] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:12:07] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:12:07] Método HTTP: POST
+[2025-05-06 19:12:07] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:12:07] Query String: 
+[2025-05-06 19:12:07] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1002589
+)
+
+[2025-05-06 19:12:07] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:12:07] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:12:07] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php6FDE.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614120721900GUGgx0N2yq1fP.jpg
+            [full_path] => 2025050614120721900GUGgx0N2yq1fP.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php6FDF.tmp
+            [error] => 0
+            [size] => 4762
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614120721900LEvydx55tqA7G.jpg
+            [full_path] => 2025050614120721900LEvydx55tqA7G.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php6FF0.tmp
+            [error] => 0
+            [size] => 995035
+        )
+
+)
+
+[2025-05-06 19:12:07] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:12:07] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4762 bytes.
+[2025-05-06 19:12:07] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:12:07] Datos de Alarma extraídos del XML.
+[2025-05-06 19:12:07] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:12:06+08:00, Evento=ANPR, Placa=BEB9815, Imagen Recibida=Sí (4762 bytes)
+[2025-05-06 19:12:07] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEB9815_1_20250506191207_44570c.jpg
+[2025-05-06 19:12:07] Procesando evento LPR (ANPR) para la placa: BEB9815
+[2025-05-06 19:12:07] Evento LPR (BEB9815 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:12:07] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:12:07] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:12:22] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES) ---
+[2025-05-06 19:12:22] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:12:22] Método HTTP: POST
+[2025-05-06 19:12:22] URI Solicitada: /LPR/webhook_hikvision.php
+[2025-05-06 19:12:22] Query String: 
+[2025-05-06 19:12:22] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 976288
+)
+
+[2025-05-06 19:12:22] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:12:22] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:12:22] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpAC00.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614122258900h0QlGRiRpDxDQ.jpg
+            [full_path] => 2025050614122258900h0QlGRiRpDxDQ.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpAC01.tmp
+            [error] => 0
+            [size] => 3613
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614122258900GSF2g1zqd3bRP.jpg
+            [full_path] => 2025050614122258900GSF2g1zqd3bRP.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpAC11.tmp
+            [error] => 0
+            [size] => 969883
+        )
+
+)
+
+[2025-05-06 19:12:22] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:12:22] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3613 bytes.
+[2025-05-06 19:12:22] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:12:22] Datos de Alarma extraídos del XML.
+[2025-05-06 19:12:22] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:12:21+08:00, Evento=ANPR, Placa=B566483, Imagen Recibida=Sí (3613 bytes)
+[2025-05-06 19:12:22] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/B566483_1_20250506191222_4142bb.jpg
+[2025-05-06 19:12:22] Procesando evento LPR (ANPR) para la placa: B566483
+[2025-05-06 19:12:22] Evento LPR (B566483 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:12:22] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:12:22] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES) ---
+[2025-05-06 19:15:39] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:15:39] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:15:39] Método HTTP: POST
+[2025-05-06 19:15:39] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1086695
+)
+
+[2025-05-06 19:15:39] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:15:39] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:15:39] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpACCF.tmp
+            [error] => 0
+            [size] => 2225
+        )
+
+    [nonMotorPicture_jpg] => Array
+        (
+            [name] => 2025050614153921200Gb1wXckfEsut0.jpg
+            [full_path] => 2025050614153921200Gb1wXckfEsut0.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpACE0.tmp
+            [error] => 0
+            [size] => 105570
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614153921300aAIDlgv3EKWtV.jpg
+            [full_path] => 2025050614153921300aAIDlgv3EKWtV.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpAD3E.tmp
+            [error] => 0
+            [size] => 978403
+        )
+
+)
+
+[2025-05-06 19:15:39] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2225
+[2025-05-06 19:15:39] No se encontró 'licensePlatePicture_jpg' en $_FILES o hubo un error de subida (Código: N/A).
+[2025-05-06 19:15:39] Parseando XML Data String (longitud: 2225): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:15:39] Datos de Alarma extraídos del XML.
+[2025-05-06 19:15:39] FINAL (multipart): No se encontró/leyó la imagen 'licensePlatePicture_jpg' desde $_FILES.
+[2025-05-06 19:15:39] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:15:37+08:00, Evento=ANPR, Placa=unknown, Imagen Recibida=No
+[2025-05-06 19:15:39] Procesando evento LPR (ANPR) para la placa: unknown
+[2025-05-06 19:15:39] Evento LPR (unknown desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:15:39] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:15:39] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:16:01] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:16:01] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:16:01] Método HTTP: POST
+[2025-05-06 19:16:01] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1155680
+)
+
+[2025-05-06 19:16:01] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:16:01] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:16:01] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php41A.tmp
+            [error] => 0
+            [size] => 2623
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614160051300pZpK0kMrsLvtB.jpg
+            [full_path] => 2025050614160051300pZpK0kMrsLvtB.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php41B.tmp
+            [error] => 0
+            [size] => 3414
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 2025050614160051300gf0nFA4tD3rP0.jpg
+            [full_path] => 2025050614160051300gf0nFA4tD3rP0.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php41C.tmp
+            [error] => 0
+            [size] => 112682
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614160051300iaAc6tIGlDUtC.jpg
+            [full_path] => 2025050614160051300iaAc6tIGlDUtC.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php45B.tmp
+            [error] => 0
+            [size] => 1036287
+        )
+
+)
+
+[2025-05-06 19:16:01] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2623
+[2025-05-06 19:16:01] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3414 bytes.
+[2025-05-06 19:16:01] Parseando XML Data String (longitud: 2623): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:16:01] Datos de Alarma extraídos del XML.
+[2025-05-06 19:16:01] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:16:00-03:00, Evento=ANPR, Placa=OAC1691, Imagen Recibida=Sí (3414 bytes)
+[2025-05-06 19:16:01] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/OAC1691_1_20250506191601_0f6096.jpg
+[2025-05-06 19:16:01] Procesando evento LPR (ANPR) para la placa: OAC1691
+[2025-05-06 19:16:01] Evento LPR (OAC1691 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:16:01] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:16:01] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:17:55] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:17:55] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:17:55] Método HTTP: POST
+[2025-05-06 19:17:55] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 975976
+)
+
+[2025-05-06 19:17:55] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:17:55] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:17:55] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpBF99.tmp
+            [error] => 0
+            [size] => 2286
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614175488300AGm3IfkZwlFUL.jpg
+            [full_path] => 2025050614175488300AGm3IfkZwlFUL.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBFAA.tmp
+            [error] => 0
+            [size] => 5273
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614175488400hYWLsU8V88ZWh.jpg
+            [full_path] => 2025050614175488400hYWLsU8V88ZWh.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBFAB.tmp
+            [error] => 0
+            [size] => 967918
+        )
+
+)
+
+[2025-05-06 19:17:55] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2286
+[2025-05-06 19:17:55] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 5273 bytes.
+[2025-05-06 19:17:55] Parseando XML Data String (longitud: 2286): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:17:55] Datos de Alarma extraídos del XML.
+[2025-05-06 19:17:55] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:17:54+08:00, Evento=ANPR, Placa=D#A345, Imagen Recibida=Sí (5273 bytes)
+[2025-05-06 19:17:55] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/DA345_1_20250506191755_f562e2.jpg
+[2025-05-06 19:17:55] Procesando evento LPR (ANPR) para la placa: D#A345
+[2025-05-06 19:17:55] Evento LPR (D#A345 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:17:55] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:17:55] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:20:01] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:20:01] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:20:01] Método HTTP: POST
+[2025-05-06 19:20:01] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 980379
+)
+
+[2025-05-06 19:20:01] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:20:01] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:20:01] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpABCC.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614200050000B3PrLlXKMcgyG.jpg
+            [full_path] => 2025050614200050000B3PrLlXKMcgyG.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpABCD.tmp
+            [error] => 0
+            [size] => 4452
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614200050000cgP7DcawiGseh.jpg
+            [full_path] => 2025050614200050000cgP7DcawiGseh.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpABDE.tmp
+            [error] => 0
+            [size] => 973135
+        )
+
+)
+
+[2025-05-06 19:20:01] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:20:01] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4452 bytes.
+[2025-05-06 19:20:01] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:20:01] Datos de Alarma extraídos del XML.
+[2025-05-06 19:20:01] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:19:59+08:00, Evento=ANPR, Placa=BBA2586, Imagen Recibida=Sí (4452 bytes)
+[2025-05-06 19:20:01] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BBA2586_1_20250506192001_07176a.jpg
+[2025-05-06 19:20:01] Procesando evento LPR (ANPR) para la placa: BBA2586
+[2025-05-06 19:20:01] Evento LPR (BBA2586 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:20:01] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:20:01] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:25:25] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:25:25] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:25:25] Método HTTP: POST
+[2025-05-06 19:25:25] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 990393
+)
+
+[2025-05-06 19:25:25] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:25:25] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:25:25] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php9D40.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614252497600VgFD7SG9mKleB.jpg
+            [full_path] => 2025050614252497600VgFD7SG9mKleB.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9D41.tmp
+            [error] => 0
+            [size] => 3366
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 20250506142524976000T2gt4iIQYd7m.jpg
+            [full_path] => 20250506142524976000T2gt4iIQYd7m.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9D42.tmp
+            [error] => 0
+            [size] => 984235
+        )
+
+)
+
+[2025-05-06 19:25:25] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:25:25] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3366 bytes.
+[2025-05-06 19:25:25] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:25:25] Datos de Alarma extraídos del XML.
+[2025-05-06 19:25:25] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:25:24+08:00, Evento=ANPR, Placa=SBL6920, Imagen Recibida=Sí (3366 bytes)
+[2025-05-06 19:25:25] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/SBL6920_1_20250506192525_7f3d74.jpg
+[2025-05-06 19:25:25] Procesando evento LPR (ANPR) para la placa: SBL6920
+[2025-05-06 19:25:25] Evento LPR (SBL6920 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:25:25] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:25:25] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:26:13] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:26:13] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:26:13] Método HTTP: POST
+[2025-05-06 19:26:13] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1596893
+)
+
+[2025-05-06 19:26:13] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:26:13] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:26:13] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php5921.tmp
+            [error] => 0
+            [size] => 2622
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614261226600GFiD94z5Znz0q.jpg
+            [full_path] => 2025050614261226600GFiD94z5Znz0q.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5932.tmp
+            [error] => 0
+            [size] => 5684
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 2025050614261226600QF1mMGqTQRSGP.jpg
+            [full_path] => 2025050614261226600QF1mMGqTQRSGP.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5933.tmp
+            [error] => 0
+            [size] => 151802
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614261226600IfbQHKgbmXOCy.jpg
+            [full_path] => 2025050614261226600IfbQHKgbmXOCy.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5982.tmp
+            [error] => 0
+            [size] => 1436111
+        )
+
+)
+
+[2025-05-06 19:26:13] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2622
+[2025-05-06 19:26:13] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 5684 bytes.
+[2025-05-06 19:26:13] Parseando XML Data String (longitud: 2622): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:26:13] Datos de Alarma extraídos del XML.
+[2025-05-06 19:26:13] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:26:11-03:00, Evento=ANPR, Placa=BEA5049, Imagen Recibida=Sí (5684 bytes)
+[2025-05-06 19:26:13] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEA5049_1_20250506192613_636ba3.jpg
+[2025-05-06 19:26:13] Procesando evento LPR (ANPR) para la placa: BEA5049
+[2025-05-06 19:26:13] Evento LPR (BEA5049 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:26:13] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:26:13] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:27:35] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:27:35] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:27:35] Método HTTP: POST
+[2025-05-06 19:27:35] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 962861
+)
+
+[2025-05-06 19:27:35] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:27:35] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:27:35] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php9C05.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 20250506142735774004Gr7EShhfnP5h.jpg
+            [full_path] => 20250506142735774004Gr7EShhfnP5h.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9C16.tmp
+            [error] => 0
+            [size] => 3438
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 20250506142735774008gVUoHFGOGve1.jpg
+            [full_path] => 20250506142735774008gVUoHFGOGve1.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9C17.tmp
+            [error] => 0
+            [size] => 956631
+        )
+
+)
+
+[2025-05-06 19:27:35] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:27:35] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3438 bytes.
+[2025-05-06 19:27:35] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:27:35] Datos de Alarma extraídos del XML.
+[2025-05-06 19:27:35] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:27:35+08:00, Evento=ANPR, Placa=B592421, Imagen Recibida=Sí (3438 bytes)
+[2025-05-06 19:27:35] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/B592421_1_20250506192735_ad2534.jpg
+[2025-05-06 19:27:35] Procesando evento LPR (ANPR) para la placa: B592421
+[2025-05-06 19:27:35] Evento LPR (B592421 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:27:35] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:27:35] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:28:50] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:28:50] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:28:50] Método HTTP: POST
+[2025-05-06 19:28:50] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 983749
+)
+
+[2025-05-06 19:28:50] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:28:50] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:28:50] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpBDC4.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614284993200mTdZ8pXEgOxMg.jpg
+            [full_path] => 2025050614284993200mTdZ8pXEgOxMg.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBDD5.tmp
+            [error] => 0
+            [size] => 3638
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614284993200EhXMWhnpg24vZ.jpg
+            [full_path] => 2025050614284993200EhXMWhnpg24vZ.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBDD6.tmp
+            [error] => 0
+            [size] => 977319
+        )
+
+)
+
+[2025-05-06 19:28:50] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:28:50] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3638 bytes.
+[2025-05-06 19:28:50] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:28:50] Datos de Alarma extraídos del XML.
+[2025-05-06 19:28:50] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:28:49+08:00, Evento=ANPR, Placa=BEA1003, Imagen Recibida=Sí (3638 bytes)
+[2025-05-06 19:28:50] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEA1003_1_20250506192850_f6a125.jpg
+[2025-05-06 19:28:50] Procesando evento LPR (ANPR) para la placa: BEA1003
+[2025-05-06 19:28:50] Evento LPR (BEA1003 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:28:50] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:28:50] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:31:35] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:31:35] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:31:35] Método HTTP: POST
+[2025-05-06 19:31:35] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1233002
+)
+
+[2025-05-06 19:31:35] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:31:35] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:31:35] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php45BA.tmp
+            [error] => 0
+            [size] => 2620
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614313479300xODdpx2l6FoWQ.jpg
+            [full_path] => 2025050614313479300xODdpx2l6FoWQ.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php45BB.tmp
+            [error] => 0
+            [size] => 3748
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 20250506143134793006NNQ0WoIKptN3.jpg
+            [full_path] => 20250506143134793006NNQ0WoIKptN3.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php45CC.tmp
+            [error] => 0
+            [size] => 170105
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614313479300LUo5ZaknyeiTf.jpg
+            [full_path] => 2025050614313479300LUo5ZaknyeiTf.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php45EC.tmp
+            [error] => 0
+            [size] => 1055855
+        )
+
+)
+
+[2025-05-06 19:31:35] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2620
+[2025-05-06 19:31:35] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3748 bytes.
+[2025-05-06 19:31:35] Parseando XML Data String (longitud: 2620): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:31:35] Datos de Alarma extraídos del XML.
+[2025-05-06 19:31:35] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:31:34-03:00, Evento=ANPR, Placa=BEA5049, Imagen Recibida=Sí (3748 bytes)
+[2025-05-06 19:31:35] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEA5049_1_20250506193135_9bdcfb.jpg
+[2025-05-06 19:31:35] Procesando evento LPR (ANPR) para la placa: BEA5049
+[2025-05-06 19:31:35] Evento LPR (BEA5049 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:31:35] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:31:35] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:32:25] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:32:25] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:32:25] Método HTTP: POST
+[2025-05-06 19:32:25] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 969530
+)
+
+[2025-05-06 19:32:25] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:32:25] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:32:25] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php66E.tmp
+            [error] => 0
+            [size] => 2292
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 20250506143224954004icsg9gq3ucrK.jpg
+            [full_path] => 20250506143224954004icsg9gq3ucrK.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php67F.tmp
+            [error] => 0
+            [size] => 4832
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614322495400cG4CLXRoWGpew.jpg
+            [full_path] => 2025050614322495400cG4CLXRoWGpew.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php680.tmp
+            [error] => 0
+            [size] => 961907
+        )
+
+)
+
+[2025-05-06 19:32:25] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2292
+[2025-05-06 19:32:25] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4832 bytes.
+[2025-05-06 19:32:25] Parseando XML Data String (longitud: 2292): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:32:25] Datos de Alarma extraídos del XML.
+[2025-05-06 19:32:25] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:32:23+08:00, Evento=ANPR, Placa=BEA8996, Imagen Recibida=Sí (4832 bytes)
+[2025-05-06 19:32:25] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEA8996_1_20250506193225_61362f.jpg
+[2025-05-06 19:32:25] Procesando evento LPR (ANPR) para la placa: BEA8996
+[2025-05-06 19:32:25] Evento LPR (BEA8996 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:32:25] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:32:25] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:32:47] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:32:47] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:32:47] Método HTTP: POST
+[2025-05-06 19:32:47] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 969807
+)
+
+[2025-05-06 19:32:47] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:32:47] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:32:47] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php5F40.tmp
+            [error] => 0
+            [size] => 2294
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 20250506143247653004yG2TM1r3rSD8.jpg
+            [full_path] => 20250506143247653004yG2TM1r3rSD8.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5F41.tmp
+            [error] => 0
+            [size] => 3247
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614324765300B54RGyQ1NO281.jpg
+            [full_path] => 2025050614324765300B54RGyQ1NO281.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5F42.tmp
+            [error] => 0
+            [size] => 963767
+        )
+
+)
+
+[2025-05-06 19:32:47] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2294
+[2025-05-06 19:32:48] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3247 bytes.
+[2025-05-06 19:32:48] Parseando XML Data String (longitud: 2294): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:32:48] Datos de Alarma extraídos del XML.
+[2025-05-06 19:32:48] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:32:46+08:00, Evento=ANPR, Placa=MAI7530, Imagen Recibida=Sí (3247 bytes)
+[2025-05-06 19:32:48] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/MAI7530_1_20250506193248_384f4b.jpg
+[2025-05-06 19:32:48] Procesando evento LPR (ANPR) para la placa: MAI7530
+[2025-05-06 19:32:48] Evento LPR (MAI7530 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:32:48] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:32:48] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:34:36] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:34:36] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:34:36] Método HTTP: POST
+[2025-05-06 19:34:36] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 979435
+)
+
+[2025-05-06 19:34:36] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:34:36] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:34:36] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php7D2.tmp
+            [error] => 0
+            [size] => 2292
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614343663600Q9NQkPW8gZdZC.jpg
+            [full_path] => 2025050614343663600Q9NQkPW8gZdZC.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php7D3.tmp
+            [error] => 0
+            [size] => 4497
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614343663700w5lEuxl5yLeG1.jpg
+            [full_path] => 2025050614343663700w5lEuxl5yLeG1.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php7D4.tmp
+            [error] => 0
+            [size] => 972147
+        )
+
+)
+
+[2025-05-06 19:34:36] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2292
+[2025-05-06 19:34:36] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4497 bytes.
+[2025-05-06 19:34:36] Parseando XML Data String (longitud: 2292): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:34:36] Datos de Alarma extraídos del XML.
+[2025-05-06 19:34:36] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:34:35+08:00, Evento=ANPR, Placa=BEB4702, Imagen Recibida=Sí (4497 bytes)
+[2025-05-06 19:34:36] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEB4702_1_20250506193436_9cd0ea.jpg
+[2025-05-06 19:34:36] Procesando evento LPR (ANPR) para la placa: BEB4702
+[2025-05-06 19:34:36] Evento LPR (BEB4702 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:34:36] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:34:36] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:38:03] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:38:03] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:38:03] Método HTTP: POST
+[2025-05-06 19:38:03] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1268674
+)
+
+[2025-05-06 19:38:03] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:38:03] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:38:03] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php309C.tmp
+            [error] => 0
+            [size] => 2256
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 2025050614380261200uuNwpXwzptwre.jpg
+            [full_path] => 2025050614380261200uuNwpXwzptwre.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php309D.tmp
+            [error] => 0
+            [size] => 226889
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614380261200XCi0viHmLAoh4.jpg
+            [full_path] => 2025050614380261200XCi0viHmLAoh4.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php30CD.tmp
+            [error] => 0
+            [size] => 1039032
+        )
+
+)
+
+[2025-05-06 19:38:03] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2256
+[2025-05-06 19:38:03] No se encontró 'licensePlatePicture_jpg' en $_FILES o hubo un error de subida (Código: N/A).
+[2025-05-06 19:38:03] Parseando XML Data String (longitud: 2256): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:38:03] Datos de Alarma extraídos del XML.
+[2025-05-06 19:38:03] FINAL (multipart): No se encontró/leyó la imagen 'licensePlatePicture_jpg' desde $_FILES.
+[2025-05-06 19:38:03] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:38:01-03:00, Evento=ANPR, Placa=unknown, Imagen Recibida=No
+[2025-05-06 19:38:03] Procesando evento LPR (ANPR) para la placa: unknown
+[2025-05-06 19:38:03] Evento LPR (unknown desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:38:03] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:38:03] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:41:03] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:41:03] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:41:03] Método HTTP: POST
+[2025-05-06 19:41:03] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1673487
+)
+
+[2025-05-06 19:41:03] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:41:03] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:41:03] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpEF52.tmp
+            [error] => 0
+            [size] => 2622
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614410292800AuwRG0qzIxGTf.jpg
+            [full_path] => 2025050614410292800AuwRG0qzIxGTf.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpEF62.tmp
+            [error] => 0
+            [size] => 8015
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 2025050614410292800ZTUNGYxo0FVND.jpg
+            [full_path] => 2025050614410292800ZTUNGYxo0FVND.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpEF73.tmp
+            [error] => 0
+            [size] => 241753
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614410292800SFxKTMtisTG0G.jpg
+            [full_path] => 2025050614410292800SFxKTMtisTG0G.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpEFA3.tmp
+            [error] => 0
+            [size] => 1420423
+        )
+
+)
+
+[2025-05-06 19:41:03] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2622
+[2025-05-06 19:41:03] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 8015 bytes.
+[2025-05-06 19:41:03] Parseando XML Data String (longitud: 2622): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:41:03] Datos de Alarma extraídos del XML.
+[2025-05-06 19:41:03] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:41:02-03:00, Evento=ANPR, Placa=SDB6343, Imagen Recibida=Sí (8015 bytes)
+[2025-05-06 19:41:03] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/SDB6343_1_20250506194103_a9c1db.jpg
+[2025-05-06 19:41:03] Procesando evento LPR (ANPR) para la placa: SDB6343
+[2025-05-06 19:41:03] Evento LPR (SDB6343 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:41:03] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:41:03] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:42:05] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:42:05] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:42:05] Método HTTP: POST
+[2025-05-06 19:42:05] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 972662
+)
+
+[2025-05-06 19:42:05] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:42:05] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:42:05] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpE128.tmp
+            [error] => 0
+            [size] => 2292
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614420565800hu4818FtEMszs.jpg
+            [full_path] => 2025050614420565800hu4818FtEMszs.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpE129.tmp
+            [error] => 0
+            [size] => 3788
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614420565800qbeYpW8GQtltm.jpg
+            [full_path] => 2025050614420565800qbeYpW8GQtltm.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpE139.tmp
+            [error] => 0
+            [size] => 966083
+        )
+
+)
+
+[2025-05-06 19:42:05] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2292
+[2025-05-06 19:42:05] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3788 bytes.
+[2025-05-06 19:42:05] Parseando XML Data String (longitud: 2292): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:42:05] Datos de Alarma extraídos del XML.
+[2025-05-06 19:42:05] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:42:04+08:00, Evento=ANPR, Placa=BED2526, Imagen Recibida=Sí (3788 bytes)
+[2025-05-06 19:42:05] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BED2526_1_20250506194205_bf6968.jpg
+[2025-05-06 19:42:05] Procesando evento LPR (ANPR) para la placa: BED2526
+[2025-05-06 19:42:05] Evento LPR (BED2526 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:42:05] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:42:05] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:43:49] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:43:49] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:43:49] Método HTTP: POST
+[2025-05-06 19:43:49] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 949521
+)
+
+[2025-05-06 19:43:49] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:43:49] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:43:49] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php7421.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614434881400EBYw0XFnPNdET.jpg
+            [full_path] => 2025050614434881400EBYw0XFnPNdET.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php7422.tmp
+            [error] => 0
+            [size] => 4374
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614434881400Q2LMFgUlTOKfa.jpg
+            [full_path] => 2025050614434881400Q2LMFgUlTOKfa.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php7433.tmp
+            [error] => 0
+            [size] => 942355
+        )
+
+)
+
+[2025-05-06 19:43:49] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:43:49] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4374 bytes.
+[2025-05-06 19:43:49] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:43:49] Datos de Alarma extraídos del XML.
+[2025-05-06 19:43:49] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:43:47+08:00, Evento=ANPR, Placa=B208226, Imagen Recibida=Sí (4374 bytes)
+[2025-05-06 19:43:49] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/B208226_1_20250506194349_0040a6.jpg
+[2025-05-06 19:43:49] Procesando evento LPR (ANPR) para la placa: B208226
+[2025-05-06 19:43:49] Evento LPR (B208226 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:43:49] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:43:49] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:44:20] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:44:20] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:44:20] Método HTTP: POST
+[2025-05-06 19:44:20] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1162338
+)
+
+[2025-05-06 19:44:20] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:44:20] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:44:20] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\phpED0D.tmp
+            [error] => 0
+            [size] => 2622
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614441894200CmPqYwh5gUfW0.jpg
+            [full_path] => 2025050614441894200CmPqYwh5gUfW0.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpED1E.tmp
+            [error] => 0
+            [size] => 6012
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 2025050614441894200fOnRZw0FkEDXf.jpg
+            [full_path] => 2025050614441894200fOnRZw0FkEDXf.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpED1F.tmp
+            [error] => 0
+            [size] => 137731
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614441894200IvakXgmUrKg7K.jpg
+            [full_path] => 2025050614441894200IvakXgmUrKg7K.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpED3F.tmp
+            [error] => 0
+            [size] => 1015299
+        )
+
+)
+
+[2025-05-06 19:44:20] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2622
+[2025-05-06 19:44:20] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 6012 bytes.
+[2025-05-06 19:44:20] Parseando XML Data String (longitud: 2622): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:44:20] Datos de Alarma extraídos del XML.
+[2025-05-06 19:44:20] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:44:18-03:00, Evento=ANPR, Placa=SDD2206, Imagen Recibida=Sí (6012 bytes)
+[2025-05-06 19:44:20] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/SDD2206_1_20250506194420_97243f.jpg
+[2025-05-06 19:44:20] Procesando evento LPR (ANPR) para la placa: SDD2206
+[2025-05-06 19:44:20] Evento LPR (SDD2206 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:44:20] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:44:20] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:45:35] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:45:35] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:45:35] Método HTTP: POST
+[2025-05-06 19:45:35] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1189966
+)
+
+[2025-05-06 19:45:35] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:45:35] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:45:35] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php1092.tmp
+            [error] => 0
+            [size] => 2622
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 20250506144533183001t2E8yECxpqc5.jpg
+            [full_path] => 20250506144533183001t2E8yECxpqc5.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php1093.tmp
+            [error] => 0
+            [size] => 6135
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 20250506144533183001tCEn0iNwUkLz.jpg
+            [full_path] => 20250506144533183001tCEn0iNwUkLz.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php10A4.tmp
+            [error] => 0
+            [size] => 197705
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614453318300o4L12zHABzM87.jpg
+            [full_path] => 2025050614453318300o4L12zHABzM87.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php10C4.tmp
+            [error] => 0
+            [size] => 982831
+        )
+
+)
+
+[2025-05-06 19:45:35] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2622
+[2025-05-06 19:45:35] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 6135 bytes.
+[2025-05-06 19:45:35] Parseando XML Data String (longitud: 2622): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:45:35] Datos de Alarma extraídos del XML.
+[2025-05-06 19:45:35] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:45:32-03:00, Evento=ANPR, Placa=BEB0476, Imagen Recibida=Sí (6135 bytes)
+[2025-05-06 19:45:35] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BEB0476_1_20250506194535_a5027c.jpg
+[2025-05-06 19:45:35] Procesando evento LPR (ANPR) para la placa: BEB0476
+[2025-05-06 19:45:35] Evento LPR (BEB0476 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:45:35] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:45:35] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:45:41] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:45:41] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:45:41] Método HTTP: POST
+[2025-05-06 19:45:41] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 976889
+)
+
+[2025-05-06 19:45:41] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:45:41] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:45:41] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php26ED.tmp
+            [error] => 0
+            [size] => 2293
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 20250506144539735004vX9LgR7WEBi0.jpg
+            [full_path] => 20250506144539735004vX9LgR7WEBi0.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php26EE.tmp
+            [error] => 0
+            [size] => 3338
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614453973500eGgcLGmGvd8Gk.jpg
+            [full_path] => 2025050614453973500eGgcLGmGvd8Gk.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php26FF.tmp
+            [error] => 0
+            [size] => 970759
+        )
+
+)
+
+[2025-05-06 19:45:41] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2293
+[2025-05-06 19:45:41] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 3338 bytes.
+[2025-05-06 19:45:41] Parseando XML Data String (longitud: 2293): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:45:41] Datos de Alarma extraídos del XML.
+[2025-05-06 19:45:41] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:45:38+08:00, Evento=ANPR, Placa=AF999FG, Imagen Recibida=Sí (3338 bytes)
+[2025-05-06 19:45:41] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/AF999FG_1_20250506194541_e5230d.jpg
+[2025-05-06 19:45:41] Procesando evento LPR (ANPR) para la placa: AF999FG
+[2025-05-06 19:45:41] Evento LPR (AF999FG desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:45:41] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:45:41] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:46:58] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:46:58] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:46:58] Método HTTP: POST
+[2025-05-06 19:46:58] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 942079
+)
+
+[2025-05-06 19:46:58] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:46:58] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:46:58] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php5435.tmp
+            [error] => 0
+            [size] => 2292
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614465686000fzrwGKyMBYhfz.jpg
+            [full_path] => 2025050614465686000fzrwGKyMBYhfz.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5446.tmp
+            [error] => 0
+            [size] => 4021
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614465686000GOsMNMtkdtziA.jpg
+            [full_path] => 2025050614465686000GOsMNMtkdtziA.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php5447.tmp
+            [error] => 0
+            [size] => 935267
+        )
+
+)
+
+[2025-05-06 19:46:58] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2292
+[2025-05-06 19:46:58] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 4021 bytes.
+[2025-05-06 19:46:58] Parseando XML Data String (longitud: 2292): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.51</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>40:ac:bf:a6:f6:82</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:46:58] Datos de Alarma extraídos del XML.
+[2025-05-06 19:46:58] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:46:55+08:00, Evento=ANPR, Placa=BBA1899, Imagen Recibida=Sí (4021 bytes)
+[2025-05-06 19:46:58] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/BBA1899_1_20250506194658_20de93.jpg
+[2025-05-06 19:46:58] Procesando evento LPR (ANPR) para la placa: BBA1899
+[2025-05-06 19:46:58] Evento LPR (BBA1899 desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:46:58] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:46:58] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---
+[2025-05-06 19:51:34] --- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO $_FILES vCorrectedPath) ---
+[2025-05-06 19:51:34] IP Remota (Cámara): 190.133.70.147
+[2025-05-06 19:51:34] Método HTTP: POST
+[2025-05-06 19:51:34] Headers Generales Recibidos:
+Array
+(
+    [Content-Type] => multipart/form-data; boundary=boundary
+    [Host] => 190.135.106.40:8888
+    [Connection] => close
+    [Content-Length] => 1283766
+)
+
+[2025-05-06 19:51:34] Detectado Content-Type multipart/form-data.
+[2025-05-06 19:51:34] $_POST contenido:
+Array
+(
+)
+
+[2025-05-06 19:51:34] $_FILES contenido:
+Array
+(
+    [anpr_xml] => Array
+        (
+            [name] => anpr.xml
+            [full_path] => anpr.xml
+            [type] => text/xml
+            [tmp_name] => C:\xampp\tmp\php8CF8.tmp
+            [error] => 0
+            [size] => 2622
+        )
+
+    [licensePlatePicture_jpg] => Array
+        (
+            [name] => 2025050614513242700mhd9Z07yhFrEt.jpg
+            [full_path] => 2025050614513242700mhd9Z07yhFrEt.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php8D08.tmp
+            [error] => 0
+            [size] => 5408
+        )
+
+    [vehiclePicture_jpg] => Array
+        (
+            [name] => 20250506145132427004zpCifUb2ZP9P.jpg
+            [full_path] => 20250506145132427004zpCifUb2ZP9P.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php8D09.tmp
+            [error] => 0
+            [size] => 200391
+        )
+
+    [detectionPicture_jpg] => Array
+        (
+            [name] => 2025050614513242700gL6gDrcdPf7Ia.jpg
+            [full_path] => 2025050614513242700gL6gDrcdPf7Ia.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php8D49.tmp
+            [error] => 0
+            [size] => 1074671
+        )
+
+)
+
+[2025-05-06 19:51:34] XML encontrado y leído de $_FILES['anpr_xml']['tmp_name']. Longitud: 2622
+[2025-05-06 19:51:34] Imagen de matrícula JPEG encontrada en $_FILES['licensePlatePicture_jpg']. Tamaño: 5408 bytes.
+[2025-05-06 19:51:34] Parseando XML Data String (longitud: 2622): <?xml version="1.0" encoding="UTF-8"?>
+<EventNotificationAlert version="2.0" xmlns="http://www.hikvision.com/ver20/XMLSchema">
+<ipAddress>192.168.1.50</ipAddress>
+<portNo>8888</portNo>
+<protocol>HTTP</protocol>
+<macAddress>d4:e8:53:9c:7f:24</macAddress>
+<channelID>1</channelID>
+<dateTime>2025...
+[2025-05-06 19:51:34] Datos de Alarma extraídos del XML.
+[2025-05-06 19:51:34] Datos Consolidados Finales: Canal=1, FechaHora=2025-05-06T14:51:31-03:00, Evento=ANPR, Placa=AF795FR, Imagen Recibida=Sí (5408 bytes)
+[2025-05-06 19:51:34] Imagen guardada: C:\xampp\htdocs\LPR/plate_images/AF795FR_1_20250506195134_236fe6.jpg
+[2025-05-06 19:51:34] Procesando evento LPR (ANPR) para la placa: AF795FR
+[2025-05-06 19:51:34] Evento LPR (AF795FR desde 1) añadido a WEBHOOK_LIVE_EVENTS_FILE.
+[2025-05-06 19:51:34] Respuesta HTTP 200 enviada a la cámara.
+[2025-05-06 19:51:34] --- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO $_FILES vCorrectedPath) ---

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consola en Vivo - Webhook LPR</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 40px); /* Full height minus padding */
+        }
+        h1 {
+            color: #569cd6;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        #console-output {
+            flex-grow: 1; /* Take remaining space */
+            background-color: #252526;
+            border: 1px solid #333;
+            padding: 15px;
+            overflow-y: auto; /* Scrollbar if content overflows */
+            white-space: pre; /* Preserve whitespace and newlines */
+            font-size: 0.9em;
+            border-radius: 5px;
+        }
+        .status {
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #888;
+        }
+        .highlight-new {
+            animation: highlight 1s ease-out;
+        }
+        @keyframes highlight {
+            from { background-color: #569cd6; color: #fff; }
+            to { background-color: transparent; color: #d4d4d4; }
+        }
+        .controls {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .controls label {
+            margin-right: 10px;
+        }
+        .controls input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .controls button {
+            background-color: #0e639c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-left: auto; /* Pushes button to the right */
+        }
+        .controls button:hover {
+            background-color: #1177bb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consola en Vivo - Webhook LPR</h1>
+
+    <div class="controls">
+        <label for="autoScroll">Auto-Scroll:</label>
+        <input type="checkbox" id="autoScroll" checked>
+        <button id="clearConsole">Limpiar Consola</button>
+    </div>
+
+    <div id="console-output">Cargando datos iniciales...</div>
+    <div class="status" id="status-message">Última actualización: Nunca</div>
+
+    <script>
+        const consoleOutput = document.getElementById('console-output');
+        const statusMessage = document.getElementById('status-message');
+        const autoScrollCheckbox = document.getElementById('autoScroll');
+        const clearConsoleButton = document.getElementById('clearConsole');
+        const pollingInterval = 2000; // Intervalo de actualización en milisegundos (ej: 2 segundos)
+        let previousContent = "";
+
+        async function fetchData() {
+            try {
+                const response = await fetch('get_live_data.php?cache_bust=' + new Date().getTime());
+                if (!response.ok) {
+                    throw new Error(`Error HTTP: ${response.status}`);
+                }
+                const data = await response.text();
+
+                if (data !== previousContent) {
+                    // Si hay nuevo contenido, lo actualizamos.
+                    // Para un efecto de "nuevo", podríamos comparar líneas, pero para simplificar,
+                    // si el contenido general cambió, lo actualizamos.
+                    consoleOutput.textContent = data;
+                    previousContent = data;
+
+                    // Auto-scroll si está activado
+                    if (autoScrollCheckbox.checked) {
+                        consoleOutput.scrollTop = consoleOutput.scrollHeight;
+                    }
+                }
+                statusMessage.textContent = `Última actualización: ${new Date().toLocaleTimeString()}`;
+
+            } catch (error) {
+                console.error('Error al obtener datos:', error);
+                statusMessage.textContent = `Error al actualizar: ${error.message} - ${new Date().toLocaleTimeString()}`;
+                consoleOutput.textContent += `\nError al obtener datos: ${error.message}`;
+            }
+        }
+
+        // Limpiar consola
+        clearConsoleButton.addEventListener('click', () => {
+            consoleOutput.textContent = "Consola limpiada...";
+            previousContent = "Consola limpiada..."; // para que el próximo fetch actualice
+        });
+
+        // Carga inicial y luego polling
+        fetchData();
+        setInterval(fetchData, pollingInterval);
+    </script>
+</body>
+</html>
