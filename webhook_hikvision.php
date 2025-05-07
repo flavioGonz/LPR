@@ -1,8 +1,10 @@
 <?php
 // --- CONFIGURACIÓN ---
 $logFile = __DIR__ . '/hikvision_lpr.log';
-$imageDir = __DIR__ . '/plate_images/';
-define('WEBHOOK_LIVE_EVENTS_FILE', __DIR__ . '/live_events.txt'); // RUTA CORREGIDA
+$imageDir = __DIR__ . '/plate_images/'; // Directorio donde se guardan las imágenes capturadas
+// WEBHOOK_LIVE_EVENTS_FILE debe apuntar a live_events.txt en el directorio raíz (donde está index.php)
+// Si webhook_hikvision.php está en LPR/ y index.php está en LPR/, entonces la ruta es:
+define('WEBHOOK_LIVE_EVENTS_FILE', __DIR__ . '/live_events.txt');
 // --- FIN CONFIGURACIÓN ---
 
 function write_log($message) {
@@ -12,21 +14,37 @@ function write_log($message) {
     file_put_contents($logFile, "[$timestamp] " . $message . "\n", FILE_APPEND | LOCK_EX);
 }
 
-function add_webhook_event_to_live_file($deviceID, $licensePlate) {
-    if (empty($deviceID) || empty($licensePlate)) { write_log("Error interno: Intento de añadir evento en vivo con deviceID o licensePlate vacíos."); return; }
-    $timestamp = date('Y-m-d H:i:s'); $entry = $timestamp . '|' . trim($deviceID) . '|' . strtoupper(trim($licensePlate)) . PHP_EOL;
-    $max_lines = 100; $current_lines = @file(WEBHOOK_LIVE_EVENTS_FILE, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+// Modificada para incluir la ruta de la imagen de captura
+function add_webhook_event_to_live_file($deviceID, $licensePlate, $imageCapturePath = '') {
+    if (empty($deviceID) && empty($licensePlate)) { // Permitir si solo uno está vacío temporalmente durante el debug
+        write_log("Advertencia: Intento de añadir evento en vivo con deviceID y/o licensePlate vacíos. Device: [$deviceID], Plate: [$licensePlate]");
+        // No retornar si queremos ver estos eventos "parciales" en live_events.txt para depuración.
+        // Pero para producción, probablemente querrías:
+        // if (empty($deviceID) || empty($licensePlate)) { return; }
+    }
+    $timestamp = date('Y-m-d H:i:s');
+    // Nuevo formato: timestamp|deviceID|licensePlate|imageCapturePath
+    $entry = $timestamp . '|' . trim($deviceID) . '|' . strtoupper(trim($licensePlate)) . '|' . trim($imageCapturePath) . PHP_EOL;
+    
+    $max_lines = 100;
+    $current_lines = @file(WEBHOOK_LIVE_EVENTS_FILE, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     if ($current_lines === false) $current_lines = [];
+    
     $new_lines_array = array_slice(array_merge([trim($entry)], $current_lines), 0, $max_lines);
+    
     if (file_put_contents(WEBHOOK_LIVE_EVENTS_FILE, implode(PHP_EOL, $new_lines_array) . PHP_EOL, LOCK_EX) === false) {
-        write_log("Error escribiendo en WEBHOOK_LIVE_EVENTS_FILE: " . WEBHOOK_LIVE_EVENTS_FILE);
-    } else { write_log("Evento LPR (".$licensePlate." desde ".$deviceID.") añadido a WEBHOOK_LIVE_EVENTS_FILE."); }
+        write_log("Error escribiendo en WEBHOOK_LIVE_EVENTS_FILE: " . WEBHOOK_LIVE_EVENTS_FILE . " (Permisos?)");
+    } else {
+        write_log("Evento LPR (".$licensePlate." desde ".$deviceID.", img: ".$imageCapturePath.") añadido a WEBHOOK_LIVE_EVENTS_FILE.");
+    }
 }
 
-write_log("--- INICIO DE PETICIÓN WEBHOOK (MULTIPART - PROCESANDO \$_FILES vCorrectedPath) ---");
+write_log("--- INICIO DE PETICIÓN WEBHOOK (vWithCaptureImagePath) ---");
 write_log("IP Remota (Cámara): " . $_SERVER['REMOTE_ADDR']);
 write_log("Método HTTP: " . $_SERVER['REQUEST_METHOD']);
-// ... (resto del logging inicial sin cambios)
+write_log("URI Solicitada: " . $_SERVER['REQUEST_URI']);
+write_log("Query String: " . (isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : 'N/A'));
+
 $headers = getallheaders();
 write_log("Headers Generales Recibidos:\n" . print_r($headers, true));
 
@@ -36,7 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $channelID = $dateTime = $eventType = $licensePlate = $region = $country = $vehicleType = $vehicleColor = null;
-$imageData = null; $imagePath = null; $xmlDataString = null;
+$imageData = null; 
+$imagePathOnServer = null; // Ruta completa en el servidor donde se guarda la imagen
+$relativePathForWeb = '';  // Ruta relativa para usar en HTML <img>
+$xmlDataString = null;
 
 $contentTypeHeader = isset($headers['Content-Type']) ? strtolower($headers['Content-Type']) : (isset($_SERVER['CONTENT_TYPE']) ? strtolower($_SERVER['CONTENT_TYPE']) : '');
 
@@ -47,7 +68,7 @@ if (strpos($contentTypeHeader, 'multipart/form-data') !== false) {
 
     if (isset($_FILES['anpr_xml']) && $_FILES['anpr_xml']['error'] === UPLOAD_ERR_OK) {
         if (isset($_FILES['anpr_xml']['tmp_name']) && is_uploaded_file($_FILES['anpr_xml']['tmp_name'])) {
-            if ($_FILES['anpr_xml']['type'] === 'text/xml' || $_FILES['anpr_xml']['type'] === 'application/xml') {
+            if (strpos(strtolower($_FILES['anpr_xml']['type']), 'xml') !== false) { // Más flexible con text/xml o application/xml
                 $xmlDataString = file_get_contents($_FILES['anpr_xml']['tmp_name']);
                 write_log("XML encontrado y leído de \$_FILES['anpr_xml']['tmp_name']. Longitud: " . strlen($xmlDataString));
             } else { write_log("Archivo 'anpr_xml' encontrado, pero el tipo no es XML: " . $_FILES['anpr_xml']['type']); }
@@ -65,8 +86,7 @@ if (strpos($contentTypeHeader, 'multipart/form-data') !== false) {
     
     if ($xmlDataString) {
         write_log("Parseando XML Data String (longitud: ".strlen($xmlDataString)."): " . substr($xmlDataString, 0, 300) . "...");
-        // Descomentar para depuración profunda del XML si es necesario:
-        // write_log("CONTENIDO COMPLETO DE anpr.xml:\n" . $xmlDataString); 
+        // write_log("CONTENIDO COMPLETO DE anpr.xml:\n" . $xmlDataString); // Descomentar para depuración profunda
         try {
             libxml_use_internal_errors(true); $xml = new SimpleXMLElement($xmlDataString); libxml_clear_errors();
             $channelID = isset($xml->channelID) ? (string)$xml->channelID : (isset($xml->EventNotificationAlert->channelID) ? (string)$xml->EventNotificationAlert->channelID : null);
@@ -77,7 +97,9 @@ if (strpos($contentTypeHeader, 'multipart/form-data') !== false) {
             elseif (isset($xml->LPR)) { $lprNode = $xml->LPR; }
             elseif (isset($xml->EventNotificationAlert->ANPR)) { $lprNode = $xml->EventNotificationAlert->ANPR; }
             elseif (isset($xml->EventNotificationAlert->LPR)) { $lprNode = $xml->EventNotificationAlert->LPR; }
-            elseif (isset($xml->Plate->licensePlate)) { $lprNode = $xml->Plate; }
+            elseif (isset($xml->Plate->licensePlate)) { $lprNode = $xml->Plate; } // Puede estar bajo <Plate><licensePlate>
+            elseif (isset($xml->vehicleDetection->Plate->licensePlate)) { $lprNode = $xml->vehicleDetection->Plate;} // Otra estructura posible
+            
             if ($lprNode) {
                 $licensePlate = isset($lprNode->licensePlate) ? (string)$lprNode->licensePlate : null;
                 $region = isset($lprNode->country) ? (string)$lprNode->country : (isset($lprNode->region) ? (string)$lprNode->region : null);
@@ -89,7 +111,7 @@ if (strpos($contentTypeHeader, 'multipart/form-data') !== false) {
                 $licensePlate = isset($xml->licensePlate) ? (string)$xml->licensePlate : (isset($xml->EventNotificationAlert->licensePlate) ? (string)$xml->EventNotificationAlert->licensePlate : null);
             }
             if(empty($eventType) && isset($xml->EventNotificationAlert->eventType)) $eventType = (string)$xml->EventNotificationAlert->eventType;
-            if(empty($eventType) && isset($xml->eventType)) $eventType = (string)$xml->eventType;
+            if(empty($eventType) && isset($xml->eventType)) $eventType = (string)$xml->eventType; // A veces el eventType está en la raíz del XML de ANPR
             write_log("Datos de Alarma extraídos del XML.");
         } catch (Exception $e) {
             write_log("Error parseando XML: " . $e->getMessage());
@@ -99,12 +121,16 @@ if (strpos($contentTypeHeader, 'multipart/form-data') !== false) {
     if (!$imageData) { write_log("FINAL (multipart): No se encontró/leyó la imagen 'licensePlatePicture_jpg' desde \$_FILES."); }
 
 } elseif (strpos($contentTypeHeader, 'application/xml') !== false || strpos($contentTypeHeader, 'text/xml') !== false) {
-    // ... (Lógica para XML directo) ...
-    write_log("Detectado Content-Type XML (directo)..."); // Acortado para brevedad
-    // Tu lógica de parseo de XML directo aquí...
+    write_log("Detectado Content-Type XML (directo). Procesando cuerpo del POST como XML.");
+    $xmlDataString = @file_get_contents('php://input');
+    if ($xmlDataString === false) { $xmlDataString = ''; write_log("Error leyendo php://input para XML directo."); }
+    if (!empty($xmlDataString)) {
+        // ... (Lógica de parseo XML directo, similar a la de arriba) ...
+        write_log("Parseo XML directo no completamente implementado en esta rama, revisar si se llega aquí.");
+    } else { write_log("Advertencia: Cuerpo del POST XML (directo) vacío."); }
 } else {
-    // ... (Lógica de fallback) ...
-    write_log("Content-Type no es XML ni multipart..."); // Acortado
+    write_log("Content-Type no es XML ni multipart. Asumiendo datos de alarma en Query String y/o imagen en cuerpo POST.");
+    // ... (Lógica de fallback GET/imagen directa, menos probable) ...
 }
 
 write_log(sprintf(
@@ -113,32 +139,71 @@ write_log(sprintf(
     $imageData ? 'Sí (' . strlen($imageData) . ' bytes)' : 'No'
 ));
 
+// --- GUARDADO DE IMAGEN Y OBTENCIÓN DE RUTA RELATIVA ---
 if ($imageData && !empty($licensePlate) && !empty($eventType) ) {
-    if (!is_dir($imageDir)) { if (!@mkdir($imageDir, 0755, true)) { write_log("Error creando dir imágenes: ".$imageDir); } }
+    if (!is_dir($imageDir)) { 
+        if (!@mkdir($imageDir, 0755, true)) { 
+            write_log("Error creando dir imágenes: ".$imageDir." (Verificar permisos del directorio padre: " . dirname($imageDir) . ")"); 
+        }
+    }
     if (is_dir($imageDir) && is_writable($imageDir)) {
         $timestampFile = time();
         $safePlate = preg_replace('/[^A-Za-z0-9_-]/', '', $licensePlate);
         if (empty($safePlate)) $safePlate = "UNKNOWNPLATE";
         $imageExtension = 'jpg';
+        
+        // $imageFileName es solo el nombre del archivo, no la ruta
         $imageFileName = $safePlate . '_' . ($channelID ?? 'CHX') . '_' . date('YmdHis', $timestampFile) . '_' . substr(md5(uniqid()),0,6) .'.' . $imageExtension;
-        $imagePath = $imageDir . $imageFileName;
-        if (file_put_contents($imagePath, $imageData)) { write_log("Imagen guardada: " . $imagePath); }
-        else { write_log("Error guardando imagen: " . $imagePath); $imagePath = null; }
-    } else { write_log("Dir imágenes no existe o no escribible: " . $imageDir); }
-} else { /* ... logs de advertencia ... */ }
+        
+        // $imagePathOnServer es la ruta completa en el servidor para guardar
+        $imagePathOnServer = rtrim($imageDir, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $imageFileName;
 
+        if (file_put_contents($imagePathOnServer, $imageData)) {
+            write_log("Imagen guardada en servidor: " . $imagePathOnServer);
+            // $relativePathForWeb es la ruta que usará el tag <img> en HTML
+            // Si plate_images/ está directamente bajo la raíz del sitio accesible por web, o bajo LPR/ que es la raíz
+            // Esta es la parte más dependiente de tu configuración web.
+            // Si index.php está en LPR/ y plate_images está en LPR/plate_images/
+            // entonces la ruta relativa desde index.php es "plate_images/nombre_archivo.jpg"
+            $relativePathForWeb = 'plate_images/' . $imageFileName; 
+            write_log("Ruta relativa para web calculada: " . $relativePathForWeb);
+        } else {
+            write_log("Error guardando imagen en: " . $imagePathOnServer . " (Verificar permisos de " . $imageDir . ")");
+            $imagePathOnServer = null; // No se guardó
+            $relativePathForWeb = ''; // No hay ruta
+        }
+    } else {
+        write_log("Directorio de imágenes no existe o no tiene permisos de escritura: " . $imageDir);
+        $relativePathForWeb = '';
+    }
+} else {
+    if (!$imageData && !empty($licensePlate) && !empty($eventType)) write_log("Advertencia: No hay datos de imagen binarios para guardar, pero hay placa y evento.");
+    if (empty($licensePlate) && $imageData) write_log("Advertencia: Hay imagen, pero no hay placa para asociarla.");
+    if (empty($eventType) && $imageData && !empty($licensePlate)) write_log("Advertencia: Hay imagen y placa, pero no eventType.");
+    $relativePathForWeb = ''; // Asegurar que esté vacía si no hay imagen o no se guarda
+}
+
+// --- LÓGICA DE NEGOCIO PRINCIPAL ---
 $relevantEventTypesLPR = ['vehicleDetection', 'ANPR', 'LPR', 'trafficDetection', 'VLR', ' ذہ能识别结果'];
 if (!empty($eventType) && in_array($eventType, $relevantEventTypesLPR) && !empty($licensePlate)) {
     write_log("Procesando evento LPR (" . $eventType . ") para la placa: " . $licensePlate);
     $eventDeviceIdentifier = $channelID;
     if (empty($eventDeviceIdentifier) && isset($_SERVER['REMOTE_ADDR'])) { $eventDeviceIdentifier = $_SERVER['REMOTE_ADDR']; }
     if(empty($eventDeviceIdentifier)) { $eventDeviceIdentifier = "UNKNOWN_DEVICE"; }
-    add_webhook_event_to_live_file($eventDeviceIdentifier, $licensePlate);
-} else { /* ... logs de no procesamiento ... */ }
+    
+    // Pasar la ruta relativa de la imagen de captura a la función
+    add_webhook_event_to_live_file($eventDeviceIdentifier, $licensePlate, $relativePathForWeb);
+
+    // ... (Tu lógica de BD si la usas) ...
+} else {
+    // ... (Logs si no es un evento LPR relevante) ...
+    if (!empty($eventType) && !in_array($eventType, $relevantEventTypesLPR)) { write_log("Evento no relevante para LPR: '" . $eventType . "'"); }
+    // ... (otros logs de "no procesamiento")
+}
 
 http_response_code(200);
 echo "OK";
 write_log("Respuesta HTTP 200 enviada a la cámara.");
-write_log("--- FIN DE PETICIÓN WEBHOOK (MULTIPART - PROCESADO \$_FILES vCorrectedPath) ---");
+write_log("--- FIN DE PETICIÓN WEBHOOK (vWithCaptureImagePath) ---");
 exit;
 ?>
