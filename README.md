@@ -6,6 +6,10 @@ Un panel de control LPR simple pero funcional escrito en PHP, diseñado para rec
 
 ![image](https://github.com/user-attachments/assets/2568973d-d611-4c8a-9e81-d8578ffd33f5)
 
+## Documentación
+*   https://deepwiki.com/flavioGonz/LPR
+  
+
 ## Funcionalidades
 
 *   Visualización de eventos LPR en tiempo real.
