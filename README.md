@@ -4,7 +4,7 @@
 
 Un panel de control LPR simple pero funcional escrito en PHP, diseñado para recibir eventos de cámaras de reconocimiento de matrículas y proporcionar una interfaz para su gestión.
 
-**(Añade aquí una captura de pantalla si tienes una buena)**
+![image](https://github.com/user-attachments/assets/2568973d-d611-4c8a-9e81-d8578ffd33f5)
 
 ## Funcionalidades
 
